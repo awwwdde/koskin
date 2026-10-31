@@ -20,6 +20,14 @@
 !/backend/
 !/public/
 !/scripts/
+!/docs/
+
+# Presentation assets used by README only.
+/docs/*
+!/docs/readme/
+/docs/readme/*
+!/docs/readme/cover.svg
+!/docs/readme/architecture.gif
 
 # Scripts for running, configuring and maintaining the website.
 /scripts/*
