@@ -1,0 +1,72 @@
+# Only the website, API, dependencies and deployment documentation belong in Git.
+# New root files stay private until explicitly allowed here.
+/*
+!/.gitignore
+!/.dockerignore
+!/.env.example
+!/README.md
+!/DEPLOY.md
+!/Dockerfile
+!/package.json
+!/package-lock.json
+!/requirements.txt
+!/alembic.ini
+!/next.config.ts
+!/postcss.config.mjs
+!/tsconfig.json
+!/app/
+!/components/
+!/lib/
+!/backend/
+!/public/
+!/scripts/
+
+# Scripts for running, configuring and maintaining the website.
+/scripts/*
+!/scripts/dev.mjs
+!/scripts/serve.py
+!/scripts/setup-admin.py
+!/scripts/download-assets.py
+
+# Public assets used by the website; logo-pack exports stay local.
+/public/*
+!/public/images/
+/public/images/branding.jpg
+
+# Local state and secrets, including nested copies.
+**/.env*
+!/.env.example
+**/.data/
+**/node_modules/
+**/.next/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/coverage/
+*.py[cod]
+*.tsbuildinfo
+*.log
+*.sqlite*
+*.db
+*.db-*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Generated documents, archives and temporary files.
+*.pdf
+*.docx
+*.pptx
+*.xlsx
+*.zip
+*.bak
+*.tmp
+**/.vscode/
+**/.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
