@@ -12,6 +12,7 @@
 !/requirements.txt
 !/alembic.ini
 !/next.config.ts
+!/proxy.ts
 !/postcss.config.mjs
 !/tsconfig.json
 !/app/
@@ -35,6 +36,7 @@
 !/scripts/serve.py
 !/scripts/setup-admin.py
 !/scripts/download-assets.py
+!/scripts/check-seo.mjs
 
 # Public assets used by the website; logo-pack exports stay local.
 /public/*

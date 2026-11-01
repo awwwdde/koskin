@@ -6,6 +6,7 @@
 !requirements.txt
 !alembic.ini
 !next.config.ts
+!proxy.ts
 !tsconfig.json
 !postcss.config.mjs
 !app/

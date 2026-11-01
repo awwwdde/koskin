@@ -33,7 +33,7 @@ function Hero() {
       </motion.div>
       <a href="#contact" className="circle-contact"><span>Написать</span><ArrowUpRight size={25} /></a>
     </div>
-    <motion.h1 id="hero-name" className="hero-name" style={{ y: titleY }} aria-label="Roman Koskin"><span>ROMAN</span><span>KOSKIN</span></motion.h1>
+    <motion.h1 id="hero-name" className="hero-name" style={{ y: titleY }} aria-label="Роман Коськин — Roman Koskin"><span>ROMAN</span><span>KOSKIN</span></motion.h1>
     <div className="hero-bottom"><a href="#work">Работы <ArrowDown size={14} /></a></div>
   </section>;
 }
@@ -96,10 +96,10 @@ function About() {
   const ref = useRef<HTMLParagraphElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start 85%", "end 45%"] });
-  const words = settings.about.split(" ");
+  const words = settings.about.replace(/^Я Роман\./, "Я Роман Коськин.").split(" ");
   return <section id="about" className="about-section section-pad" aria-labelledby="about-title">
     <h2 id="about-title" className="sr-only">Обо мне</h2>
-    <div className="about-layout"><div className="about-aside"><div className="about-photo"><Image src="/images/roman.png" alt="Портрет Романа" width={360} height={480} sizes="(max-width: 700px) 45vw, 25vw" /></div></div>
+    <div className="about-layout"><div className="about-aside"><div className="about-photo"><Image src="/images/roman.png" alt="Роман Коськин — графический дизайнер" width={360} height={480} sizes="(max-width: 700px) 45vw, 25vw" /></div></div>
       <div className="about-text"><p ref={ref} className="reading-text">{words.map((word, i) => <ReadingWord key={i} word={word} progress={scrollYProgress} start={i / words.length * .8} end={(i + 1) / words.length * .8} reduced={!!reduced} />)}</p><Reveal className="about-body"><p>{settings.biography}</p><p>{settings.extra}</p><a href="#contact" className="text-link">Связаться со мной <ArrowUpRight size={20} /></a></Reveal></div></div>
   </section>;
 }

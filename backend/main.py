@@ -48,6 +48,8 @@ async def private_cache(request: Request, call_next):
     response = await call_next(request)
     if request.url.path.startswith("/api/admin"):
         response.headers["Cache-Control"] = "no-store"
+    if request.url.path.startswith("/api/admin") or request.url.path in {"/api/content", "/api/enquiries"}:
+        response.headers["X-Robots-Tag"] = "noindex"
     return response
 
 class EnquiryInput(BaseModel):

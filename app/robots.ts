@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.PUBLIC_SITE_URL || "http://localhost:3000";
-  return { rules: { userAgent: "*", allow: "/", disallow: ["/api/", "/admin"] }, sitemap: `${base}/sitemap.xml` };
+  return { rules: { userAgent: "*", allow: ["/", "/api/media/"], disallow: ["/api/", "/admin", "/healthz"] }, sitemap: siteUrl("/sitemap.xml") };
 }

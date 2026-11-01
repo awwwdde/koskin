@@ -8,7 +8,7 @@ COPY components ./components
 COPY lib ./lib
 COPY backend/default-content.json ./backend/default-content.json
 COPY public ./public
-COPY next.config.ts tsconfig.json postcss.config.mjs ./
+COPY next.config.ts proxy.ts tsconfig.json postcss.config.mjs ./
 RUN npm run build
 
 FROM python:3.12-slim-bookworm AS runner
